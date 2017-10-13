@@ -4,9 +4,9 @@ var knex = require('../db/knex');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  knex.raw(`select * from users`)
-    .then(function(users) {
-      res.send(users.rows)
+  knex.raw(`select * from comments`)
+    .then(function(comments) {
+      res.send(comments.rows)
     })
 });
 
