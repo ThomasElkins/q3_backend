@@ -1,2 +1,1 @@
-web: knex migrate:rollback && knex migrate:latest && knex seed:run &&
-  node ./bin/www
+web: knex migrate:rollback && knex migrate:latest && knex seed:run && node ./bin/www
