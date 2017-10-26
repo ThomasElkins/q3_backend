@@ -5,7 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cors = require('cors');
-var port = process.env.PORT;
+var port = process.env.PORT || 8000;
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -48,5 +48,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 app.listen(port, function() {
+console.log("listening on port: ", port);
 })
 module.exports = app;
